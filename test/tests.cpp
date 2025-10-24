@@ -5,7 +5,6 @@
 #include "Octagon.h"
 #include "Triangle.h"
 
-// Простые тесты для Triangle
 TEST(TriangleTest, BasicArea) {
     std::array<std::pair<double, double>, 3> vertices = {{{0, 0}, {4, 0}, {0, 3}}};
     Triangle triangle(vertices);
@@ -20,7 +19,6 @@ TEST(TriangleTest, BasicCenter) {
     EXPECT_DOUBLE_EQ(center.second, 1.0);
 }
 
-// Простые тесты для Hexagon
 TEST(HexagonTest, BasicArea) {
     std::array<std::pair<double, double>, 6> vertices = {{
         {0, 0}, {2, 0}, {3, 1}, {2, 2}, {0, 2}, {-1, 1}
@@ -40,7 +38,6 @@ TEST(HexagonTest, BasicCenter) {
     EXPECT_DOUBLE_EQ(center.second, 1.0);
 }
 
-// Простые тесты для Octagon
 TEST(OctagonTest, BasicArea) {
     std::array<std::pair<double, double>, 8> vertices = {{
         {0, 0}, {2, 0}, {3, 1}, {3, 3},
@@ -62,7 +59,6 @@ TEST(OctagonTest, BasicCenter) {
     EXPECT_DOUBLE_EQ(center.second, 2.0);
 }
 
-// Тесты для Array
 TEST(ArrayTest, AddFigures) {
     Array array;
     auto triangle = std::make_shared<Triangle>(std::array<std::pair<double, double>, 3>{{{0, 0}, {4, 0}, {0, 3}}});
